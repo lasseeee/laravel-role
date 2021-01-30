@@ -1,19 +1,12 @@
 {
-    "name": ":vendor_name/:package_name",
-    "description": ":package_description",
+    "name": "lasseeee/laravel-role",
+    "description": "laravel-role",
     "keywords": [
-        ":vendor_name",
-        ":package_name"
+        "lasseeee",
+        "laravel-role"
     ],
-    "homepage": "https://github.com/:vendor_name/:package_name",
+    "homepage": "https://github.com/lasseeee/laravel-role",
     "license": "MIT",
-    "authors": [
-        {
-            "name": ":author_name",
-            "email": ":author_email",
-            "role": "Developer"
-        }
-    ],
     "require": {
         "php": "^7.4|^8.0",
         "spatie/laravel-package-tools": "^1.1",
@@ -26,13 +19,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src",
-            "Spatie\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Lasseeee\\Role\\": "src",
+            "Lasseeee\\Role\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "Lasseeee\\Role\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -46,10 +39,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\Skeleton\\SkeletonServiceProvider"
+                "Lasseeee\\Role\\RoleServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "Spatie\\Skeleton\\SkeletonFacade"
+                "Role": "Lasseeee\\Role\\RoleFacade"
             }
         }
     },
