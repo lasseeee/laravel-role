@@ -2,7 +2,7 @@
 
 namespace Lasseeee\Role\Concerns;
 
-use Lasseeee\Models\Role;
+use Lasseeee\Role\Models\Role;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Collection;
@@ -14,7 +14,7 @@ trait HasRoles
      */
     public function roles(): BelongsToMany
     {
-        return $this->belongsToMany(Role::class)
+        return $this->belongsToMany(config('role.role_model')::class)
         ->withTimestamps();
     }
 
@@ -41,7 +41,7 @@ trait HasRoles
                 return $role;
             }
 
-            return Role::firstWhere('name', $role);
+            return config('role.role_model')::firstWhere('name', $role);
         }, $roles);
 
         return $query->whereHas('roles', function (Builder $subQuery) use ($roles) {
@@ -164,7 +164,7 @@ trait HasRoles
     protected function findRole($role): Role
     {
         if (is_string($role)) {
-            return Role::firstWhere('name', $role);
+            return config('role.role_model')::firstWhere('name', $role);
         }
 
         return $role;
