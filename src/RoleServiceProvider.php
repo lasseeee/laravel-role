@@ -18,6 +18,7 @@ class RoleServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-role')
             ->hasConfigFile()
-            ->hasMigration('create_laravel_role_table');
+            ->hasMigration('create_roles_table')
+            ->hasMigration('create_role_user_table');
     }
 }

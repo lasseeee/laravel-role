@@ -1,7 +1,10 @@
 <?php
 
-namespace Lasseeee\Models\Role;
+namespace Lasseeee\Role\Models;
 
-class Role
+use Illuminate\Database\Eloquent\Model;
+
+class Role extends Model
 {
+    //
 }
