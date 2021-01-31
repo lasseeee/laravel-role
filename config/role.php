@@ -1,6 +1,6 @@
 <?php
 
-use Lasseeee\Models\Role;
+use Lasseeee\Role\Models\Role;
 
 return [
     /*
