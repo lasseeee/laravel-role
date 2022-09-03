@@ -2,6 +2,6 @@
 
 All notable changes to `laravel-role` will be documented in this file.
 
-## 1.0.0 - 202X-XX-XX
+## v1.0.0 - 2021-01-31
 
-- initial release
+- Initial release
