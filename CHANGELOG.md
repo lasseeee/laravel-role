@@ -2,6 +2,12 @@
 
 All notable changes to `laravel-role` will be documented in this file.
 
+## v2.0.0 - 2022-09-03
+
+### Added
+
+- Support for Laravel 9
+
 ## v1.0.0 - 2021-01-31
 
 - Initial release
