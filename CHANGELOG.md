@@ -2,6 +2,11 @@
 
 All notable changes to `laravel-role` will be documented in this file.
 
+## v2.0.1 - 2022-09-04
+
+### Changed
+- Bump depenendencies
+
 ## v2.0.0 - 2022-09-03
 
 ### Added
