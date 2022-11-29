@@ -44,7 +44,7 @@ trait HasRoles
                 return $role;
             }
 
-            return $this->getRoleModel()::firstWhere('name', $role);
+            return $this->getRoleModel()::firstWhere(config('role.name_column'), $role);
         }, $roles);
 
         return $query->whereHas('roles', function (Builder $subQuery) use ($roles) {
@@ -109,7 +109,7 @@ trait HasRoles
     public function hasRole($role): bool
     {
         if (is_string($role)) {
-            return $this->roles->contains('name', $role);
+            return $this->roles->contains(config('role.name_column'), $role);
         }
 
         if ($role instanceof Role) {
@@ -150,10 +150,10 @@ trait HasRoles
     {
         return collect($roles)
         ->map(function ($role) {
-            return $role instanceof Role ? $role->name : $role;
+            return $role instanceof Role ? $role->{config('role.name_column')} : $role;
         })
         ->diff(
-            $this->roles->pluck('name')
+            $this->roles->pluck(config('role.name_column'))
         )
         ->isEmpty();
     }
@@ -167,7 +167,7 @@ trait HasRoles
     protected function findRole($role): Role
     {
         if (is_string($role)) {
-            return config('role.role_model')::firstWhere('name', $role);
+            return config('role.role_model')::firstWhere(config('role.name_column'), $role);
         }
 
         return $role;
