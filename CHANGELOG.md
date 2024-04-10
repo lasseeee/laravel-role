@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-role` will be documented in this file.
 
+## v4.0.0 - 2024-04-10
+
+### Added
+- Add support for Laravel 10
+
+### Removed
+- Support for older Laravel versions
+
 ## v3.0.0 - 2022-11-30
 
 ### Changed
