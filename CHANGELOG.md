@@ -2,6 +2,11 @@
 
 All notable changes to `laravel-role` will be documented in this file.
 
+## v7.0.0 - 2026-10-15
+
+### Added
+- Add support for Laravel 13
+
 ## v6.0.0 - 2026-06-04
 
 ### Added
